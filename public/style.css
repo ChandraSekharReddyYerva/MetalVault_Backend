@@ -1,0 +1,277 @@
+:root {
+    color: black;
+    font-family: sans-serif;
+    }
+    
+.container {
+     height: 250vh;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+     grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+     grid-template-areas: 
+         "nav nav nav nav nav nav"
+         "about about about about about profile-pic"
+         "education education education education education education"
+         "projects projects projects projects projects projects"
+         "experience experience experience experience experience experience"
+         "blogs blogs blogs blogs blogs blogs"
+         "footer footer footer footer footer footer"
+        ;
+    }
+    
+nav {
+    background-color: white;
+    float: left;
+    width: 100%;
+    box-shadow: 1px 1px grey;
+    grid-area: nav;
+    }
+    
+nav label {
+    font-size: bold 15px;
+    color: black;
+    text-align:center;
+    padding: 15px;
+    margin: 5px;
+    }
+    
+.nav-buttons {
+    float: right;
+    font-size: 14px;
+    color: black;
+    background-color: #E8DCDC;
+    text-align: center;
+    padding: 14px 10px;
+    margin: 5px;
+    text-decoration: none;
+    box-shadow: 2px 4px grey;
+    }
+    
+.nav-buttons:hover {
+    background-color: grey;
+    color: white;
+    }
+
+.dropdown {
+   display: none;
+    visibility:hidden;
+    }
+    
+#picture {
+    float: right;
+    grid-area: profile-pic;
+    margin: 5px;
+
+    }
+    
+.picture {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    box-shadow: 2px 4px grey;
+    }
+    
+#about {
+    padding: 20px;
+    margin: 20px;
+    height: auto;
+    box-shadow: 1px 1px grey;
+    background-color: #f4eeee;
+    grid-area: about;
+    }
+    
+#experience {
+    padding: 20px;
+    margin: 20px;
+    background-color: #E8DCDC;
+    height: auto;
+    box-shadow: 2px 4px grey;
+    grid-area: experience;
+    }
+
+.title {
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+    text-align:center;
+    }
+    
+#education {
+    padding: 20px;
+    margin: 20px;
+    background-color: #E8DCDC;
+    height: auto;
+    box-shadow: 2px 4px grey;
+    grid-area: education;
+    }
+    
+#education table td {
+    text-align: Center;
+    padding-top: 10px;
+    }
+    
+#projects {
+    padding: 20px;
+    margin: 20px;
+    height: auto;
+    box-shadow: 1px 1px grey;
+    background-color: #f4eeee;
+    grid-area: projects;
+    }
+    
+.project-items {
+    padding: 5px;
+    margin: 20px;
+    max-width: 100%;
+    }
+    
+#blogs {
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 1px 1px grey;
+    background-color: #f4eeee;
+    grid-area: blogs;
+    }
+
+.links {
+        color: black;
+        padding: 10px;
+        margin: 10px;
+        }
+    
+footer {
+    margin-top: 20px;
+    background-color: #E8DCDC;
+    text-align: center;
+    font-size: 25px;
+    height: auto;
+    box-shadow: 2px 4px grey;
+    grid-area: footer;
+    }
+    
+.foot-links {
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .container{
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "nav"
+            "profile-pic"
+            "about" 
+            "education"
+            "projects"
+            "experience"
+            "blogs"
+            "footer"
+        }
+    
+        nav {
+            display: left;
+            max-height: none;
+        }
+    
+        #profile-pic {
+            grid-area: profile-pic;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+
+        .dropdown {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "nav"
+            "profile-pic"
+            "about" 
+            "education"
+            "projects"
+            "experience"
+            "blogs"
+            "footer"
+        }
+    
+        nav{
+            display:block;
+            max-height: none;
+        }
+    
+        nav label {
+            font-size: bold solid 5px;
+            padding: 10px;
+            margin: 2px;
+        }
+    
+        .nav-buttons {
+            display: none;
+            visibility: hidden;
+        }
+    
+        .dropdown {
+            display: block;
+            visibility: visible;
+            padding: 20px;
+        }
+    
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #E8DCDC;
+            min-width: 470px;
+            
+        }
+    
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            margin: 10px;
+            display: block;
+            text-decoration: none;
+        }
+    
+        .dropdown-content a:hover {
+            color: white;
+            background-color: #E8DCDC;
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    
+        .nav-button {
+            color: black;
+            background-color: #E8DCDC;
+            border-radius: 10px;
+            float: right;
+        }
+    
+        #profile-pic {
+            grid-area: profile-pic;
+            text-align: center;
+            margin: 5px;
+        }
+    
+        #projects {
+            display:grid ;
+    
+        }
+    
+        .project-items {
+            display: grid;
+            max-width: 100%;
+        }
+    
+    }
